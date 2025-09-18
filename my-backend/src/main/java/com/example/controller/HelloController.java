@@ -1,12 +1,26 @@
 package com.example.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
-@RestController
+
+
+@Controller
 public class HelloController {
+    @RequestMapping("/")
+    public String index() {
+        return "index.html";
+    }
+    
     @GetMapping("/api/hello")
     public String sayHello() {
-        return "Hello from Java backend 🚀";
+       return "Hello from Java backend 🚀";
     }
+    
 }
