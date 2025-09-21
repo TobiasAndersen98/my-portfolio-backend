@@ -16,6 +16,7 @@ public class HelloController {
     @GetMapping("/api/hello")
     public String sayHello() {
        return "Hello from Java backend 🚀";
+       
     }
     
 }
